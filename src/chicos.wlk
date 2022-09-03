@@ -80,5 +80,26 @@ object pancracio {
 
 object pedro {
 
+	var disfraces = []
+	var property caramelos = 0
+	
+	method poneteDisfraz(_disfraz){
+		disfraces.add(_disfraz)
+	}
+	
+	method dejaDisfraz(){
+		var aSacar = disfraces.last()
+		disfraces.remove(aSacar)
+	}
+	
+	method cualesLlevas() = return disfraces
+	
+	method recibirCaramelos(_cant){
+		self.caramelos(_cant)
+	}
+	
+	method capacidadAsustar() = 
+		disfraces.fold(10,{acum,disfraz => acum + disfraz.nivelSusto()})
+	
 }
 

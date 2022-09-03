@@ -4,7 +4,7 @@ import adultos.*
 
 object legionDelTerror {
 	//conformada por niños
-	var integrantes = [ ]
+	var property integrantes = [ ]
 
 	//capacidad de asustar es la suma de las capacidades de susto de sus integrantes
 	method capacidadAsustar() = 
@@ -17,6 +17,15 @@ object legionDelTerror {
 	//metodo para recibir caramelos, los recibe el lider del grupo
 	method recibirCaramelos(cant){
 		self.quienLidera().recibirCaramelos(cant)
+	}
+	
+	//metodo para agregar niños a la legion, entran en conj
+	method agregarInt(_ninios) = integrantes.addAll(#{_ninios})
+	
+	//metodo para obtener los N niños con mayor cantidad de caramelos
+	method integrantesConMasCaramelos(_cuantos){		
+		var ordenados = integrantes.sortedBy({ a, b => a.caramelos() > b.caramelos() })
+		return ordenados.take(_cuantos)
 	}
 }
 

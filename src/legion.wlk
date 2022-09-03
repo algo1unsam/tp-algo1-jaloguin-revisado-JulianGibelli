@@ -16,11 +16,15 @@ object legionDelTerror {
 		
 	//metodo para recibir caramelos, los recibe el lider del grupo
 	method recibirCaramelos(cant){
-		self.quienLidera().recibirCaramelos(cant)
+		return self.quienLidera().recibirCaramelos(cant)
 	}
 	
+	//metodo suma de caramelos de todos los integrantes
+	method caramelos() =
+		integrantes.sum({i=>i.caramelos()})
+	
 	//metodo para agregar niños a la legion, entran en conj
-	method agregarInt(_ninios) = integrantes.addAll(#{_ninios})
+	method agregarInt(_ninios) = integrantes.addAll(_ninios)
 	
 	//metodo para obtener los N niños con mayor cantidad de caramelos
 	method integrantesConMasCaramelos(_cuantos){		

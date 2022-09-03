@@ -20,6 +20,7 @@ object macaria {
 		var acum = _cant - _cant.div(4)
 		self.caramelos(acum)
 		acum = 0
+		return self.caramelos()
 	}
 	
 	method poneteDisfraz(_disfraz){
@@ -72,7 +73,7 @@ object pancracio {
 	//metodo para recibir caramelos
 	
 	method recibirCaramelos(_cant){
-		self.caramelos(_cant)
+		return self.caramelos(_cant)
 	}
 }
 
@@ -95,7 +96,7 @@ object pedro {
 	method cualesLlevas() = return disfraces
 	
 	method recibirCaramelos(_cant){
-		self.caramelos(_cant)
+		return self.caramelos(_cant)
 	}
 	
 	method capacidadAsustar() = 

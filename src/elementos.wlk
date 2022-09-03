@@ -35,7 +35,7 @@ object mascaraFrankenstein {
 
 object mascaraPolitico {
 	//su tamaño es de 2 unidades * cantida de promesas hechas
-	var property promesas = 3
+	var property promesas = 1
 
 	method nivelSusto(){
 		return 2 * self.promesas()

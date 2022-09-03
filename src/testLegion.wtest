@@ -39,13 +39,13 @@ test "El lider se lleva los caramelos" {
 	assert.that(pancracio.caramelos()>0)
 }
 
-//test "La cantidad de caramelos recibida es correcta" {
-//	pancracio.poneteDisfraz(mascaraFrankenstein)
-//	macaria.poneteDisfraz(mascaraPolitico)
-//	legionDelTerror.agregarInt([pancracio,macaria])
-//	mirca.doyCaramelos(legionDelTerror)
-//	assert.equals(24,legionDelTerror.recibirCaramelos(24)) 
-//}
+test "La cantidad de caramelos recibida es correcta" {
+	pancracio.poneteDisfraz(mascaraFrankenstein)
+	macaria.poneteDisfraz(mascaraPolitico)
+	legionDelTerror.agregarInt([pancracio,macaria])
+	mirca.doyCaramelos(legionDelTerror)
+	assert.equals(24,legionDelTerror.recibirCaramelos(24)) 
+}
 
 //test "Los 2 con mas caramelos" {
 //	pancracio.recibirCaramelos(10)

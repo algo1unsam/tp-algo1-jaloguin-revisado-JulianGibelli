@@ -17,7 +17,7 @@ object macaria {
 	
 	//metodo para recibir caramelos (reveer para macaria)	
 	method recibirCaramelos(_cant){
-		var acum = _cant.div(4)
+		var acum = _cant - _cant.div(4)
 		self.caramelos(acum)
 		acum = 0
 	}
@@ -46,7 +46,7 @@ object pancracio {
 	//no le gusta llevar mas de 1 disfraz
 	//inicialmente lleva a mascara dracula
 	var property disfraz = mascaraDracula
-	var property susto = ["b","u","u"]
+	var property susto = ["b","u","u","u","u"]
 	var property caramelos = 0
 
 	//su capacidad de susto es cantidad de "u" de su grito + capacidad de susto de su unico disfraz

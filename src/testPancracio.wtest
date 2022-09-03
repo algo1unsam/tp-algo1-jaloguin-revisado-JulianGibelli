@@ -3,18 +3,18 @@ import elementos.*
 import adultos.*
 
 test "La capacidad de susto de pancracio con su disfraz favorito es 8" {
-	assert.equals(8,pancracio.capacidadSusto())
+	assert.equals(8,pancracio.capacidadAsustar())
 }
 
 test "La capacidad de susto de pancracio cambia segun el elemento" {
-	pancracio.disfrazar(barba)
-	assert.equals(14,pancracio.capacidadSusto())
+	pancracio.poneteDisfraz(barba)
+	assert.equals(14,pancracio.capacidadAsustar())
 }
 
 test "Se queda con el ultimo elemento" {
-	pancracio.disfrazar(barba)
-	pancracio.disfrazar(mascaraFrankenstein)
-	assert.equals([mascaraFrankenstein],pancracio.disfraces())
+	pancracio.poneteDisfraz(barba)
+	pancracio.poneteDisfraz(mascaraFrankenstein)
+	assert.equals(mascaraFrankenstein,pancracio.disfraz())
 }
 
 test "Pancracio recibe caramelos" {
@@ -23,11 +23,11 @@ test "Pancracio recibe caramelos" {
 }
 
 test "Pancracio se niega a dejar de usar un disfraz" {
-	pancracio.quitarDisfraz(mascaraDracula)
-	assert.equals([mascaraDracula],pancracio.disfraces())
+	pancracio.dejaDisfraz()
+	assert.equals(mascaraDracula,pancracio.disfraz())
 }
 
 test "Pancracio aumenta su nivel de grito" {
-	pancracio.quitarDisfraz(barba)
-	assert.equals(10,pancracio.capacidadSusto())
+	pancracio.dejaDisfraz()
+	assert.equals(10,pancracio.capacidadAsustar())
 }
